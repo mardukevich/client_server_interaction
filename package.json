@@ -14,7 +14,6 @@
   "scripts": {
     "server": "yarn build && node dist/authorization_server.js",
     "build": "webpack --config webpack.config.js",
-
     "watch": "webpack --watch"
   }
 }
