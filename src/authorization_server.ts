@@ -1,6 +1,7 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
+import * as users from './users.json';
 
 const app = express();
 const port = 7000;
@@ -8,7 +9,6 @@ const port = 7000;
 const tokenKey = '1a2b-3c4d-5e6f-7g8h';
 
 // Replace 'users' with your actual user data import
-import * as users from './users.json';
 
 app.use(express.json());
 
@@ -60,6 +60,9 @@ app.get('/user', (req: Request, res: Response) => {
             .status(401)
             .json({ message: 'Not authorized' });
 });
+
+app.get('/', (req: Request, res: Response) => console.log('User loged'));
+
 
 app.listen(port, () =>
     console.log(`Server listens on port ${port}`)
