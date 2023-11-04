@@ -12,8 +12,9 @@
     "webpack-cli": "5.1.4"
   },
   "scripts": {
-    "start": "node dist/server.js",
+    "server": "yarn build && node dist/authorization_server.js",
     "build": "webpack --config webpack.config.js",
+
     "watch": "webpack --watch"
   }
 }
