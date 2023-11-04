@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "node dist/server.js",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch"
   }
 }
