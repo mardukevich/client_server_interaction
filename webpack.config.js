@@ -1,6 +1,8 @@
 // webpack.config.js
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const plugins = [new CleanWebpackPlugin()]
 const serverConfig = {
   mode: 'development',
   entry: './src/server/server.ts',
@@ -12,6 +14,7 @@ const serverConfig = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
+  plugins,
   module: {
     rules: [
       {
@@ -34,6 +37,7 @@ const clientConfig = {
   resolve: {
     extensions: ['.ts', '.tsx'],
   },
+  plugins,
   module: {
     rules: [
       {
