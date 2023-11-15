@@ -16,8 +16,10 @@
     "webpack-cli": "5.1.4"
   },
   "scripts": {
-    "server": "yarn build && node dist/authorization_server.js",
-    "build": "webpack --config webpack.config.js",
-    "watch": "webpack --watch"
+    "server:run": "yarn server:dev && node dist/server.js",
+    "server:dev": "webpack --config webpack.config.js --env side=server",
+    "server:watch": "webpack --watch --config webpack.config.js --env side='server'",
+    "client:dev": "webpack --config webpack.config.js --env side=client",
+    "client:watch": "webpack --watch --config webpack.config.js --env side=client"
   }
 }

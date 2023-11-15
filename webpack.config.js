@@ -1,12 +1,12 @@
 // webpack.config.js
 const path = require('path');
 
-module.exports = {
+const serverConfig = {
   mode: 'development',
-  entry: './src/authorization_server.ts',
+  entry: './src/server/server.ts',
   target: 'node', 
   output: {
-    filename: 'authorization_server.js', // Output server bundle file
+    filename: 'server.js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
@@ -22,3 +22,31 @@ module.exports = {
     ]
   }
 };
+
+const clientConfig = {
+  mode: 'development',
+  entry: './src/client/scripts/index.tsx',
+  target: 'web', 
+  output: {
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx'],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ]
+  }
+};
+
+module.exports = (env, args) => {
+  if (env.side == 'server')
+    return serverConfig;
+  return clientConfig;
+}
