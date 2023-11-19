@@ -1,6 +1,7 @@
 // webpack.config.js
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const plugins = [new CleanWebpackPlugin()]
 const serverConfig = {
@@ -28,7 +29,7 @@ const serverConfig = {
 
 const clientConfig = {
   mode: 'development',
-  entry: './src/client/scripts/index.tsx',
+  entry: './src/view/scripts/index.tsx',
   target: 'web', 
   output: {
     filename: 'bundle.js',
@@ -37,7 +38,11 @@ const clientConfig = {
   resolve: {
     extensions: ['.ts', '.tsx'],
   },
-  plugins,
+  plugins: plugins.concat([
+    new HtmlWebpackPlugin({
+      template: "src/view/html/index.html",
+    })
+  ]),
   module: {
     rules: [
       {
