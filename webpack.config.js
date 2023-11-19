@@ -31,7 +31,7 @@ const clientConfig = {
   entry: './src/client/scripts/index.tsx',
   target: 'web', 
   output: {
-    filename: 'index.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
