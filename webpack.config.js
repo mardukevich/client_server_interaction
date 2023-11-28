@@ -36,7 +36,7 @@ const clientConfig = {
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: ['.ts', '.tsx'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   plugins: plugins.concat([
     new HtmlWebpackPlugin({
