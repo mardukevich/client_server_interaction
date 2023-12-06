@@ -11,7 +11,7 @@ const { Header } = Layout;
 const { Title } = Typography;
 
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Layout>
@@ -21,11 +21,8 @@ const App: React.FC = () => {
         <Routes>
           <Route path={Path.Home} element={<Home />} />
           <Route path={Path.Login} element={<Login />} />
-          {/* Add more routes as needed */}
         </Routes>
       </Layout>
     </BrowserRouter>
   );
 };
-
-export default App;
