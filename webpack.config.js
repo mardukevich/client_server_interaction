@@ -15,7 +15,7 @@ const serverConfig = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
-  plugins,
+  plugins: [],
   module: {
     rules: [
       {
@@ -46,7 +46,7 @@ const clientConfig = {
   module: {
     rules: [
       {
-        test: /\.tsx$/,
+        test: /\.(ts|tsx)$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
