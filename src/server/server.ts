@@ -9,4 +9,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/users', router);
 
+app.get('/', (req, res) => { 
+  res.sendFile('dist/index.html')
+})
+
 app.listen(port, () => console.log(`This app is listening on port ${port}`));
