@@ -3,16 +3,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Login } from './login';
 import { Home } from './home';
+import { Path } from '../../path/paths';
 
 export function App() {
-  const [loggedIn, setLoggedIn] = React.useState(false)
-  const [email, setEmail] = React.useState("")
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path={Path.Home} element={<Home />} />
+        <Route path={Path.Login} element={<Login />} />
       </Routes>
     </BrowserRouter>
   );

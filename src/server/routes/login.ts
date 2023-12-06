@@ -1,11 +1,12 @@
 import express from 'express';
+import { Path } from '../../path/paths';
 
 export const router = express.Router()
 
-router.get("/login", (req, res) => {
+router.get(Path.Login, (req, res) => {
   res.send("login page")
 })
   
-router.get("/register", (req, res) => {
+router.get(Path.Register, (req, res) => {
   res.send("register")
 })
