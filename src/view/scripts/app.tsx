@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Login } from './login';
-import './App.css';
 
 export function App() {
   const [loggedIn, setLoggedIn] = useState(false)
