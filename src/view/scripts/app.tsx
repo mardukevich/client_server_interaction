@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import { Login } from './login';
-import { Home } from './home';
-import { Path } from '../../path/paths';
-
 import { Layout, Typography } from 'antd';
+
+import { Path } from 'path/paths';
+
+import { Login } from 'view/scripts/login';
+import { Home } from 'view/scripts//home';
+
 
 const { Header } = Layout;
 const { Title } = Typography;
