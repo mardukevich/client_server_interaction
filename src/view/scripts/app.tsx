@@ -5,7 +5,7 @@ import { Layout, Typography } from 'antd';
 import { Path } from 'path/paths';
 
 import { Login } from 'view/scripts/login';
-import { Home } from 'view/scripts//home';
+import { Home } from 'view/scripts/home';
 
 
 const { Header } = Layout;
