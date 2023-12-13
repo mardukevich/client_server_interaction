@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { router } from 'server/routes/login';
-import { Path } from 'path/paths';
+import { router } from './routes/login';
+import { Path } from '../path/paths';
 
 const app = express();
 const port = 7000;

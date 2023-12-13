@@ -1,5 +1,5 @@
 import express from 'express';
-import { Path } from 'path/paths';
+import { Path } from '../../path/paths';
 
 export const router = express.Router()
 
