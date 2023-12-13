@@ -31,6 +31,7 @@ const clientConfig = {
   mode: 'development',
   entry: './src/view/scripts/index.tsx',
   target: 'web', 
+  devtool: 'source-map',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
