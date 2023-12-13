@@ -10,8 +10,10 @@ const port = 7000;
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/users', router);
+app.use(express.static('dist'))
 
 app.get(Path.Home, (req, res) => { 
+  res.setHeader('Content-Type', 'text/html');
   res.sendFile(path.resolve(__dirname, 'index.html'))
 })
 
